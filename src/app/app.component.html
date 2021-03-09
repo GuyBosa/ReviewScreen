@@ -4,15 +4,16 @@
         <div class="col-md-6 offset-md-3">
            <form style="margin-top: 30px;" [formGroup]="productForm" (ngSubmit)="onSubmit()" #myForm="ngForm"> 
     
-            <p>
+            <h3>Please give us your feedback below</h3>
+            <!-- <p>
               <label for="name">Please give us your feedback below:</label>
               <input type="text" id="name" name="name" formControlName="name" class="form-control">
+            </p> -->
+            <p>
+               Click "New Line" if you need more space.
             </p>
             <p>
-               <label for="name">Click "New Line" if you need more space.</label>
-            </p>
-            <p>
-               <label for="name">Click "X" to remove the current line.</label>
+              Click "X" to remove the current line.
             </p>
             <p>
                <label for="name">Your review must be atleast 50 characters but <br> no more than 100 characters.</label>
@@ -34,11 +35,16 @@
                 </td>
               </tr>
             </table>
-           
-            <button type="submit" class="btn btn-success">Submit</button>
+
+            <div class="md-form">
+              <textarea type="text" id="form7" class="md-textarea form-control" mdbInput></textarea>
+            </div>
+            <div style="margin-top: 20px">
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div>
             
           </form>
-          {{this.productForm.value | json}}
+          <!-- {{this.productForm.value | json}} -->
          </div>
      </div>
   </div>
